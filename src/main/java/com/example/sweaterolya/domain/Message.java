@@ -13,6 +13,9 @@ public class Message {
     private String text;
     private String tag;
 
+    @OneToOne
+    private User author;
+
     public Message() {
     }
 
@@ -38,5 +41,11 @@ public class Message {
     }
 
 
+    public User getAuthor() {
+        return author;
+    }
 
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 }
